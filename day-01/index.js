@@ -21,4 +21,24 @@ function titleCase(sentence) {
   return words.join(' ');
 }
 
-module.exports = { reverseSentence, addPunctuation, addFirst, titleCase };
+function evenOrOddish(num) {
+  const digits = num.split('');
+  const numbersArray = digits.map((x) => parseInt(x));
+  const sum = numbersArray.reduce((acc, curr) => acc + curr);
+
+  if (sum % 2 == 0) {
+    return 'Evenish';
+  } else {
+    return 'Oddish';
+  }
+}
+
+evenOrOddish('52');
+
+module.exports = {
+  reverseSentence,
+  addPunctuation,
+  addFirst,
+  titleCase,
+  evenOrOddish,
+};

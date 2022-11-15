@@ -3,6 +3,7 @@ const {
   addPunctuation,
   addFirst,
   titleCase,
+  evenOrOddish,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -27,8 +28,14 @@ describe('primitive code challenges', () => {
   });
 
   describe('titleCase', () => {
-    it('capitalizes the first letter of every word in a provided sentence', () => {
+    it.skip('capitalizes the first letter of every word in a provided sentence', () => {
       expect(titleCase('I love my doggo.')).toBe('I Love My Doggo.');
+    });
+  });
+
+  describe('evenOrOddish', () => {
+    it.skip('sums the numbers constituting a string and determines if its even or odd', () => {
+      expect(evenOrOddish('523')).toBe('Evenish');
     });
   });
 });
