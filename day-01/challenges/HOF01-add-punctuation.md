@@ -1,5 +1,4 @@
-DEMO: Add Punctuation
----
+## DEMO: Add Punctuation
 
 ## Challenge
 
@@ -21,4 +20,19 @@ console.log(addUnsure('Hello World'));
 // Hello World?!?
 console.log(addUnsure('Pokemon, catch em all'));
 // Pokemon, catch em all?!?
+
+
+
+
+
+function addPunctuation(punctuation) => {
+  // return x =>
+  const x = 'string';
+  const y = x.concat(punctuation);
+  console.log(y);
+
+  // function that takes strings and returns string + 'punctuation'
+}
+
+addPunctuation('!!')
 ```

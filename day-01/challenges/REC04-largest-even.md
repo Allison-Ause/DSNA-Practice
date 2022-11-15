@@ -1,9 +1,8 @@
-Largest Even
----
+## Largest Even
 
 ## Challenge
 
-Write a function that finds the largest number in an array `nums` that is also even. 
+Write a function that finds the largest number in an array `nums` that is also even.
 If there is no even number, return -1.
 
 **Make your function recursive**.
@@ -22,4 +21,33 @@ largestEven([3, 7, 2, 1, 7, 9, 10, 13]) ➞ 10
 largestEven([1, 3, 5, 7]) ➞ -1
 
 largestEven([0, 19, 18973623]) ➞ 0
+
+
+// giving it a default value means that the second argument is optional, but if it's not there, it has a default value provided
+const largestEven = (arr, largest=-1) => {
+    const element = arr[0]
+  if(element == null) {
+    return largest
+  } else if(element % 2 == 0 && element > largest) {
+    largest = element
+  } else {
+    // do nothing
+  }
+  return largestEven(arr.slice(1, arr.length), largest)
+}
+
+// refactored for destructuring
+
+const largestEven = (arr, largest=-1) => {
+  const [element, ...nextArr] = arr
+  if(element == null) {
+    return largest
+  } else if(element % 2 == 0 && element > largest) {
+    largest = element
+  } else {
+    // do nothing
+  }
+  return largestEven(nextArr, largest)
+}
+return largestEvent(nextArr, largest)
 ```
