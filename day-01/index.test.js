@@ -1,4 +1,9 @@
-const { reverseSentence, addPunctuation, addFirst } = require('./index');
+const {
+  reverseSentence,
+  addPunctuation,
+  addFirst,
+  titleCase,
+} = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -15,9 +20,15 @@ describe('primitive code challenges', () => {
   });
 
   describe('addFirst', () => {
-    it('takes an element and returns a function which takes an array and returns new array with element at index 0', () => {
+    it.skip('takes an element and returns a function which takes an array and returns new array with element at index 0', () => {
       const addOrange = addFirst('orange');
       expect(addOrange(['rose', 'honey'])).toEqual(['orange', 'rose', 'honey']);
+    });
+  });
+
+  describe('titleCase', () => {
+    it('capitalizes the first letter of every word in a provided sentence', () => {
+      expect(titleCase('I love my doggo.')).toBe('I Love My Doggo.');
     });
   });
 });
