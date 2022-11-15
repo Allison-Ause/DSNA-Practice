@@ -55,7 +55,33 @@ function multiplesOfN(n) {
   return multiplesArray;
 }
 
-multiplesOfN(10);
+function convert(roman) {
+  const numerals = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  };
+
+  let result = 0;
+
+  for (let i = 0; i < roman.length; i++) {
+    // if number to right is more, subtract
+    // if number to right is left, add
+    if (numerals[roman[i]] < numerals[roman[i + 1]]) {
+      result -= numerals[roman[i]];
+    } else {
+      result += numerals[roman[i]];
+    }
+  }
+
+  return result;
+}
+
+convert('VI');
 
 module.exports = {
   reverseSentence,
@@ -65,4 +91,5 @@ module.exports = {
   evenOrOddish,
   fizzBuzz,
   multiplesOfN,
+  convert,
 };
