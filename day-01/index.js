@@ -33,7 +33,17 @@ function evenOrOddish(num) {
   }
 }
 
-evenOrOddish('52');
+function fizzBuzz(n) {
+  const array = [];
+
+  for (let num = 1; num < n + 1; num++) {
+    if (num % 15 === 0) array.push('FizzBuzz');
+    else if (num % 3 === 0) array.push('Fizz');
+    else if (num % 5 === 0) array.push('Buzz');
+    else array.push(num);
+  }
+  return array;
+}
 
 module.exports = {
   reverseSentence,
@@ -41,4 +51,5 @@ module.exports = {
   addFirst,
   titleCase,
   evenOrOddish,
+  fizzBuzz,
 };

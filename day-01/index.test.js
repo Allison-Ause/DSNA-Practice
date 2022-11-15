@@ -4,6 +4,7 @@ const {
   addFirst,
   titleCase,
   evenOrOddish,
+  fizzBuzz,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -36,6 +37,33 @@ describe('primitive code challenges', () => {
   describe('evenOrOddish', () => {
     it.skip('sums the numbers constituting a string and determines if its even or odd', () => {
       expect(evenOrOddish('523')).toBe('Evenish');
+    });
+  });
+
+  describe('fizzbuzz', () => {
+    it('divisible by 3 = fizz, divisible by 5 = buzz, divisible by both = fizzbuzz', () => {
+      expect(fizzBuzz(20)).toEqual([
+        1,
+        2,
+        'Fizz',
+        4,
+        'Buzz',
+        'Fizz',
+        7,
+        8,
+        'Fizz',
+        'Buzz',
+        11,
+        'Fizz',
+        13,
+        14,
+        'FizzBuzz',
+        16,
+        17,
+        'Fizz',
+        19,
+        'Buzz',
+      ]);
     });
   });
 });
