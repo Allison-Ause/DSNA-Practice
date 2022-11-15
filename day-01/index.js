@@ -45,6 +45,18 @@ function fizzBuzz(n) {
   return array;
 }
 
+function multiplesOfN(n) {
+  const multiplesArray = [];
+
+  for (let num = 1; num < 51; num++) {
+    if (num % n == 0) multiplesArray.push(num);
+  }
+
+  return multiplesArray;
+}
+
+multiplesOfN(10);
+
 module.exports = {
   reverseSentence,
   addPunctuation,
@@ -52,4 +64,5 @@ module.exports = {
   titleCase,
   evenOrOddish,
   fizzBuzz,
+  multiplesOfN,
 };

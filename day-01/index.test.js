@@ -5,6 +5,7 @@ const {
   titleCase,
   evenOrOddish,
   fizzBuzz,
+  multiplesOfN,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -41,7 +42,7 @@ describe('primitive code challenges', () => {
   });
 
   describe('fizzbuzz', () => {
-    it('divisible by 3 = fizz, divisible by 5 = buzz, divisible by both = fizzbuzz', () => {
+    it.skip('divisible by 3 = fizz, divisible by 5 = buzz, divisible by both = fizzbuzz', () => {
       expect(fizzBuzz(20)).toEqual([
         1,
         2,
@@ -64,6 +65,12 @@ describe('primitive code challenges', () => {
         19,
         'Buzz',
       ]);
+    });
+  });
+
+  describe('multiplesOfN', () => {
+    it('returns an array of numbers divisible by the n parameter', () => {
+      expect(multiplesOfN(10)).toEqual([10, 20, 30, 40, 50]);
     });
   });
 });
