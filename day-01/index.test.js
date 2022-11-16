@@ -8,6 +8,7 @@ const {
   multiplesOfN,
   convert,
   anagrams,
+  rootDigit,
 } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -85,6 +86,12 @@ describe('primitive code challenges', () => {
   describe('anagrams', () => {
     it('determines if two words are anagrams', () => {
       expect(anagrams('begin', 'being')).toBe(true);
+    });
+  });
+
+  describe('rootDigit', () => {
+    it('sums an inputed number from its component parts recursively down to one digit', () => {
+      expect(rootDigit(3697)).toBe(7);
     });
   });
 });

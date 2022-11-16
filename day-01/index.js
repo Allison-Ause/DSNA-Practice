@@ -91,7 +91,16 @@ function anagrams(wordOne, wordTwo) {
   else return false;
 }
 
-anagrams('cat', 'tac');
+function rootDigit(num) {
+  const digits = num.toString().split('');
+
+  if (digits.length === 1) return num;
+  else {
+    const integers = digits.map((d) => +d);
+    const sum = integers.reduce((acc, curr) => acc + curr);
+    return rootDigit(sum);
+  }
+}
 
 module.exports = {
   reverseSentence,
@@ -103,4 +112,5 @@ module.exports = {
   multiplesOfN,
   convert,
   anagrams,
+  rootDigit,
 };
