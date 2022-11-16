@@ -81,7 +81,17 @@ function convert(roman) {
   return result;
 }
 
-convert('VI');
+function anagrams(wordOne, wordTwo) {
+  if (wordOne.length !== wordTwo.length) return false;
+
+  const w1 = wordOne.split('').sort().join('');
+  const w2 = wordTwo.split('').sort().join('');
+
+  if (w1 === w2) return true;
+  else return false;
+}
+
+anagrams('cat', 'tac');
 
 module.exports = {
   reverseSentence,
@@ -92,4 +102,5 @@ module.exports = {
   fizzBuzz,
   multiplesOfN,
   convert,
+  anagrams,
 };
